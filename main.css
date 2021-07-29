@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+#app {
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+    font-family: sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #222;
+}
+
+.header > * {
+    color: #eeeeee;    
+}
+
+.header__jogador {
+    padding: 12px;
+}
+
+.header__status {
+    padding: 12px;
+    /* faz a div ocupar o resto do "box" */
+    flex-grow: 1;
+    text-align: center;
+}
+
+.header__restart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+.tabuleiro {
+    display: grid;
+    background: #cccccc;
+    gap: 10px;
+    padding: 10px;
+    flex-grow: 1;
+    /* Transforma a grid em um 3x3 */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.celula {
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: cursive;
+    font-size: 80px;
+    color: darkslategrey;
+}
+
+.celula:hover {
+    background: #eeeeee;
+}
+
+.celula-vencedor {
+    color: greenyellow;
+}
